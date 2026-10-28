@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Roadmap CP C++ • 12 tuần</title>
+<style>
+:root{--bg:#f5f7fc;--ink:#162236;--muted:#66758e;--blue:#4f83ed;--green:#269c75;--orange:#e3a044;--stroke:#e0e7f1;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.5}
+.top{background:#101e34;color:#fff;position:relative;overflow:hidden;padding:62px 24px 46px}.top:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(90deg,#0007,#000)}.top:after{content:"";position:absolute;width:400px;height:400px;right:-140px;top:-170px;background:#527ae933;filter:blur(60px);border-radius:50%}.hero{position:relative;max-width:1160px;margin:auto}.eyebrow{display:inline-flex;align-items:center;background:#ffffff12;color:#b5d0ff;border:1px solid #ffffff24;border-radius:24px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.top h1{font-size:clamp(32px,5.4vw,58px);line-height:1.12;letter-spacing:-.04em;max-width:780px;margin:19px 0 14px}.top p{max-width:670px;color:#b6c3d9;font-size:16px;margin:0 0 24px}.metrics{display:flex;gap:12px;flex-wrap:wrap}.metric{padding:11px 16px;border:1px solid #ffffff2b;background:#ffffff0d;border-radius:12px;color:#dce6f8;font-size:14px}.metric b{color:#fff;font-size:16px}
+.wrap{display:grid;grid-template-columns:235px minmax(0,1fr);gap:35px;max-width:1200px;margin:0 auto;padding:34px 22px 85px}.side{position:sticky;top:20px;align-self:start;background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:20px;box-shadow:0 12px 38px #152c5710}.side h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#718099;margin:0 0 17px}.side a{display:block;color:#42536f;text-decoration:none;padding:9px 10px;margin:4px 0;border-radius:9px;font-size:13px;font-weight:600}.side a:hover{background:#f1f5fd;color:#255ecb}.progress-label{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:12px;margin:25px 0 8px}.progress-track{height:9px;background:#ebeff5;border-radius:30px;overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#5988ed,#2fb38b);border-radius:30px;transition:width .3s}.tip{font-size:12px;color:#7d8aa0;line-height:1.65;margin-top:14px}.reset{font:inherit;background:none;border:0;color:#a0aabc;text-decoration:underline;cursor:pointer;font-size:12px;padding:0;margin-top:14px}
+.content{min-width:0}.intro{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:4px 0 30px}.intro h2{font-size:23px;letter-spacing:-.025em;margin:0}.intro p{color:var(--muted);font-size:14px;margin:6px 0 0}.legend{color:#718099;font-size:12px;white-space:nowrap}
+.stage{margin:0 0 30px;--accent:var(--blue)}.stage[data-id="2"]{--accent:var(--green)}.stage[data-id="3"]{--accent:var(--orange)}.stage-title{max-width:570px;margin:0 auto 16px;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--stroke);padding:13px 18px;border-radius:13px;box-shadow:0 4px 15px #182b4409;position:relative;z-index:2}.stage-count{height:37px;min-width:37px;border-radius:10px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;display:grid;place-items:center}.stage-title b{display:block;font-size:14px}.stage-title small{color:#8390a4;display:block;font-size:12px;margin-top:2px}
+.step{display:grid;grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr);min-height:150px;position:relative}.step .track{grid-column:2;grid-row:1;position:relative}.track:before{content:"";position:absolute;width:3px;top:0;bottom:0;left:calc(50% - 1.5px);background:#d6deec}.track:after{content:"";position:absolute;height:2px;background:#cfdae9;top:42px}.step.left .track:after{left:0;width:50%}.step.right .track:after{right:0;width:50%}.pin{position:absolute;left:50%;top:31px;transform:translateX(-50%);height:23px;width:23px;background:var(--accent);border:5px solid #fff;border-radius:50%;box-shadow:0 0 0 2px var(--accent),0 3px 8px #102e3e22;z-index:1}
+.node{grid-row:1;background:#fff;border:1px solid #e0e7ef;border-top:3px solid var(--accent);border-radius:14px;box-shadow:0 5px 23px #11243a0b;margin-bottom:16px;overflow:hidden;min-width:0}.step.left .node{grid-column:1}.step.right .node{grid-column:3}.node-head{padding:17px 17px 11px;display:flex;align-items:start;gap:10px;justify-content:space-between}.seq{font-weight:800;font-size:11px;letter-spacing:.09em;color:var(--accent)}.node h3{margin:3px 0 3px;font-size:18px;letter-spacing:-.025em;line-height:1.25}.node p{margin:0;font-size:12px;color:#7b8aa1}.week{font-weight:700;background:#f1f5fa;border-radius:8px;padding:6px 8px;white-space:nowrap;color:#677a96;font-size:11px}.node-actions{display:flex;align-items:center;justify-content:space-between;padding:0 16px 14px}.level{font-size:11px;color:#7d8ba2}.complete{border:1px solid #d8e3ed;background:#fff;color:#4d627f;font-size:11px;padding:7px 10px;border-radius:8px;cursor:pointer;font-weight:700}.complete:hover{border-color:#42ae8e;color:#18795a}.node.done{background:#fafffd;border-color:#bce8d3;border-top-color:#33b588}.node.done .complete{background:#e2f7ed;color:#16815d;border-color:#bce8d3}
+details{border-top:1px solid #edf1f6}summary{color:#476aaf;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer;user-select:none}details[open] summary{background:#f7f9fd}details .detail{padding:12px 16px 16px;font-size:12px;color:#5d6d87}details .detail strong{font-size:12px;color:#24344b}details ul{padding-left:18px;margin:6px 0 13px}details li{margin:4px 0}.goal{background:#f1f6fe;color:#3a5a89;border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.5}
+.finish{border-radius:16px;margin:24px auto 0;background:linear-gradient(125deg,#182e55,#173b62);color:#fff;padding:25px;max-width:580px;text-align:center;box-shadow:0 12px 25px #122c5526}.finish h2{margin:0 0 8px;font-size:20px}.finish p{color:#c5d6ec;margin:0;font-size:13px}.footer{text-align:center;color:#8895a9;font-size:12px;padding:0 15px 30px}
+@media(max-width:930px){.wrap{grid-template-columns:1fr}.side{position:static}.links{display:flex;gap:8px;flex-wrap:wrap}.side a{border:1px solid #e3eaf3;margin:0}.progress-label{margin-top:12px}}
+@media(max-width:650px){.top{padding:42px 20px 34px}.intro{display:block}.legend{margin-top:8px}.wrap{padding:24px 13px 55px}.step{grid-template-columns:34px minmax(0,1fr)}.step .track{grid-column:1}.step .node,.step.left .node,.step.right .node{grid-column:2}.track:before{left:16px}.track:after,.step.left .track:after,.step.right .track:after{left:16px;right:0;width:auto}.pin{left:17px}.stage-title{margin-left:0}.node h3{font-size:17px}}
+@media print{.top{background:#101e34!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{display:block}.side{display:none}.node{break-inside:avoid}.step{min-height:auto}.stage{break-inside:auto}details .detail{display:block}.finish{break-inside:avoid}}
+</style></head><body>
+<header class="top"><div class="hero"><span class="eyebrow">CP Learning Path · C++</span><h1>Roadmap Competitive Programming</h1><p>Từ câu lệnh điều kiện đến tư duy tối ưu thuật toán. Lộ trình giảng dạy 11 chủ đề, chia 3 giai đoạn với bài tập và mục tiêu rõ ràng.</p><div class="metrics"><div class="metric"><b>12</b> tuần</div><div class="metric"><b>24</b> buổi</div><div class="metric"><b>11</b> chủ đề</div><div class="metric"><b>3</b> giai đoạn</div></div></div></header>
+<div class="wrap"><aside class="side"><h3>Điều hướng</h3><div class="links"><a href="#stage-1">🔵 1. Nền tảng (Tuần 1–4)</a><a href="#stage-2">🟢 2. Xử lý dữ liệu (Tuần 5–8)</a><a href="#stage-3">🟠 3. Tối ưu (Tuần 9–12)</a><a href="#finish">🏆 Kiểm tra cuối khóa</a></div><div class="progress-label"><span>Tiến độ học</span><span id="progress-text">0/11 · 0%</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="tip">Bấm <b>“Kiến thức & bài tập”</b> để xem chi tiết từng chủ đề. Chọn <b>“Đánh dấu xong”</b> để theo dõi tiến độ ngay trên trình duyệt của bạn.</p><button type="button" class="reset" id="reset">Đặt lại tiến độ</button></aside>
+<main class="content"><div class="intro"><div><h2>Sơ đồ lộ trình</h2><p>Học từ trên xuống; các nhánh nối nhau theo thứ tự ưu tiên giảng dạy.</p></div><span class="legend">○ Chưa học &nbsp; ● Hoàn thành</span></div><div id="roadmap"></div><div class="finish" id="finish"><h2>🏆 Contest tổng hợp cuối khóa</h2><p>4–5 bài phối hợp duyệt, sắp xếp, đánh dấu, prefix sum, chặt nhị phân và hai con trỏ. Đánh giá tư duy, độ phức tạp và kỹ năng debug.</p></div></main></div><div class="footer">Roadmap biên soạn riêng để giảng dạy CP cơ bản · Có thể mở offline · Tiến độ lưu cục bộ trong trình duyệt</div>
+<script>
+const TOPICS = [
+  {
+    "id": "if",
+    "stage": 1,
+    "week": "Tuần 1",
+    "name": "If / Else",
+    "tag": "Rẽ nhánh điều kiện",
+    "level": "Cơ bản",
+    "detail": [
+      "So sánh: ==, !=, <, <=, >, >=",
+      "Các toán tử logic: &&, ||, !",
+      "if, else if, else; điều kiện lồng nhau",
+      "Kiểm tra đầu vào và chia trường hợp"
+    ],
+    "problems": [
+      "Số lớn nhất trong 3 số",
+      "Kiểm tra năm nhuận",
+      "Kiểm tra ba cạnh tam giác"
+    ],
+    "goal": "Tự phân tích được các trường hợp và viết điều kiện đúng."
+  },
+  {
+    "id": "loops",
+    "stage": 1,
+    "week": "Tuần 2",
+    "name": "For / While + Mảng",
+    "tag": "Vòng lặp và dữ liệu dãy",
+    "level": "Cơ bản",
+    "detail": [
+      "for, while, break, continue",
+      "Vòng lặp lồng nhau; đếm, tính tổng",
+      "Mảng một chiều và chỉ số",
+      "Nhập/xuất, duyệt mảng; O(n), O(n²)"
+    ],
+    "problems": [
+      "Tính tổng 1..n",
+      "Tổng chữ số của n",
+      "Tìm min/max và số lần xuất hiện trong mảng"
+    ],
+    "goal": "Biết chọn vòng lặp và tránh truy cập mảng sai chỉ số."
+  },
+  {
+    "id": "math",
+    "stage": 1,
+    "week": "Tuần 3",
+    "name": "Số học",
+    "tag": "Tính chia hết và ước số",
+    "level": "Cơ bản",
+    "detail": [
+      "Chia nguyên, modulo, điều kiện chia hết",
+      "Ước số, bội số, duyệt ước đến √n",
+      "GCD bằng Euclid và LCM",
+      "Phân tích thừa số nguyên tố cơ bản"
+    ],
+    "problems": [
+      "Đếm ước của một số",
+      "Tính GCD và LCM",
+      "Tính tổng các ước dương"
+    ],
+    "goal": "Biết khai thác tính chất số học thay vì thử mọi giá trị."
+  },
+  {
+    "id": "prime",
+    "stage": 1,
+    "week": "Tuần 4",
+    "name": "Số nguyên tố",
+    "tag": "Kiểm tra và sàng",
+    "level": "Cơ bản",
+    "detail": [
+      "Định nghĩa số nguyên tố; kiểm tra đến √n",
+      "Sàng Eratosthenes O(n log log n)",
+      "Lưu số nguyên tố, đếm số nguyên tố trong đoạn",
+      "Phân biệt bài một số và nhiều truy vấn"
+    ],
+    "problems": [
+      "Liệt kê số nguyên tố ≤ n",
+      "Đếm số nguyên tố trong [l, r]",
+      "Tìm các thừa số nguyên tố của n"
+    ],
+    "goal": "Phân biệt khi nào dùng kiểm tra đơn lẻ và khi nào dùng sàng."
+  },
+  {
+    "id": "search",
+    "stage": 2,
+    "week": "Tuần 5",
+    "name": "Tìm kiếm / Duyệt",
+    "tag": "Linear search và brute force",
+    "level": "Cơ bản",
+    "detail": [
+      "Tìm kiếm tuyến tính trong mảng",
+      "Duyệt tất cả phần tử, tất cả cặp",
+      "Brute force và kiểm tra điều kiện",
+      "Ước lượng O(n), O(n²) từ giới hạn n"
+    ],
+    "problems": [
+      "Tìm phần tử đầu tiên bằng x",
+      "Đếm các cặp có tổng k",
+      "Tìm đoạn con thỏa điều kiện (n nhỏ)"
+    ],
+    "goal": "Biết viết lời giải đúng trước, sau đó nhận diện điểm chậm."
+  },
+  {
+    "id": "sort",
+    "stage": 2,
+    "week": "Tuần 6",
+    "name": "Sắp xếp",
+    "tag": "Sort, pair và comparator",
+    "level": "Cơ bản",
+    "detail": [
+      "Hiểu nguyên lý sắp xếp cơ bản",
+      "std::sort và sắp xếp tăng/giảm",
+      "Sắp xếp cặp (pair), comparator tùy chỉnh",
+      "Độ phức tạp O(n log n), tác dụng của thứ tự"
+    ],
+    "problems": [
+      "Sắp xếp mảng tăng dần",
+      "Đếm phần tử phân biệt sau khi sort",
+      "Sắp xếp danh sách theo điểm rồi theo tên"
+    ],
+    "goal": "Dùng sort đúng và tận dụng thứ tự để xử lý bài toán."
+  },
+  {
+    "id": "mark",
+    "stage": 2,
+    "week": "Tuần 7",
+    "name": "Đánh dấu",
+    "tag": "Mảng bool và mảng đếm",
+    "level": "Cơ bản",
+    "detail": [
+      "Mảng bool để kiểm tra đã xuất hiện",
+      "Mảng tần suất cnt[x]",
+      "Giới hạn giá trị và chỉ số âm/lớn",
+      "Ứng dụng đánh dấu, đếm, khử trùng lặp"
+    ],
+    "problems": [
+      "Đếm phần tử phân biệt",
+      "Tìm giá trị bị thiếu",
+      "Tìm phần tử xuất hiện nhiều nhất"
+    ],
+    "goal": "Biết khi nào mảng đánh dấu nhanh và khi nào cần map/set."
+  },
+  {
+    "id": "prefix",
+    "stage": 2,
+    "week": "Tuần 8",
+    "name": "Mảng cộng dồn",
+    "tag": "Prefix sum và truy vấn đoạn",
+    "level": "Cơ bản",
+    "detail": [
+      "Xây dựng prefix[i] = tổng a[1..i]",
+      "Truy vấn sum(l,r) = prefix[r] - prefix[l-1]",
+      "Prefix count theo điều kiện",
+      "Chú ý 0-based/1-based và kiểu long long"
+    ],
+    "problems": [
+      "Truy vấn tổng đoạn [l,r]",
+      "Đếm số chẵn trong đoạn",
+      "Tìm đoạn có tổng cho trước (n nhỏ)"
+    ],
+    "goal": "Trả lời được nhiều truy vấn tổng đoạn trong O(1) mỗi truy vấn."
+  },
+  {
+    "id": "binary",
+    "stage": 3,
+    "week": "Tuần 9–10",
+    "name": "Chặt nhị phân",
+    "tag": "Trên mảng và trên đáp án",
+    "level": "Vận dụng",
+    "detail": [
+      "Tìm kiếm nhị phân trên mảng đã sắp xếp",
+      "lower_bound và upper_bound",
+      "Tìm vị trí đầu tiên/cuối cùng thỏa điều kiện",
+      "Binary search on answer: hàm check đơn điệu",
+      "Lỗi biên, mid, vòng lặp vô hạn, overflow"
+    ],
+    "problems": [
+      "Đếm số lần xuất hiện của x trong mảng sort",
+      "Tìm giá trị nhỏ nhất thỏa điều kiện",
+      "Factory Machines (CSES)"
+    ],
+    "goal": "Chứng minh được tính đơn điệu trước khi áp dụng chặt nhị phân."
+  },
+  {
+    "id": "mapset",
+    "stage": 3,
+    "week": "Tuần 11",
+    "name": "Map / Set",
+    "tag": "Cấu trúc dữ liệu có thứ tự và hash",
+    "level": "Vận dụng",
+    "detail": [
+      "set, multiset: chèn, xóa, đếm, lower_bound",
+      "map: đếm theo khóa, tra cứu giá trị",
+      "unordered_map: trung bình O(1), trường hợp xấu",
+      "So sánh dùng mảng đánh dấu, map, set"
+    ],
+    "problems": [
+      "Đếm tần suất phần tử lớn",
+      "Đếm số giá trị khác nhau",
+      "Tìm hai số có tổng k bằng hash"
+    ],
+    "goal": "Chọn đúng cấu trúc dữ liệu theo kích thước và kiểu giá trị."
+  },
+  {
+    "id": "two",
+    "stage": 3,
+    "week": "Tuần 12",
+    "name": "Hai con trỏ",
+    "tag": "Two pointers và sliding window",
+    "level": "Vận dụng",
+    "detail": [
+      "Hai đầu trên mảng đã sắp xếp",
+      "Hai con trỏ cùng chiều",
+      "Sliding window và duy trì điều kiện",
+      "Điều kiện đảm bảo tiến con trỏ, O(n)"
+    ],
+    "problems": [
+      "Hai số có tổng k (mảng sort)",
+      "Đoạn dài nhất có tổng ≤ k (a[i] không âm)",
+      "Đoạn có tối đa k giá trị phân biệt"
+    ],
+    "goal": "Nhận diện điều kiện cho phép cửa sổ co giãn và chứng minh O(n)."
+  }
+];
+const GROUPS={1:{name:'NỀN TẢNG LẬP TRÌNH',sub:'Tuần 1–4 · Điều kiện, vòng lặp, số học và nguyên tố'},2:{name:'XỬ LÝ DỮ LIỆU',sub:'Tuần 5–8 · Duyệt, sắp xếp, đánh dấu và prefix sum'},3:{name:'TỐI ƯU THUẬT TOÁN',sub:'Tuần 9–12 · Binary search, map/set, two pointers'}};
+const KEY='cp-learning-roadmap-v1';
+let completed = new Set();
+try{completed=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));}catch(e){}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){
+  const root=document.getElementById('roadmap');
+  root.innerHTML=[1,2,3].map(group=>`<section class="stage" data-id="${group}" id="stage-${group}"><div class="stage-title"><div class="stage-count">0${group}</div><div><b>${GROUPS[group].name}</b><small>${GROUPS[group].sub}</small></div></div>${TOPICS.filter(t=>t.stage===group).map((t,i)=>`<div class="step ${i%2?'right':'left'}"><article class="node ${completed.has(t.id)?'done':''}"><div class="node-head"><div><span class="seq">CHỦ ĐỀ ${String(TOPICS.indexOf(t)+1).padStart(2,'0')}</span><h3>${escapeHTML(t.name)}</h3><p>${escapeHTML(t.tag)}</p></div><span class="week">${escapeHTML(t.week)}</span></div><div class="node-actions"><span class="level">◈ ${escapeHTML(t.level)}</span><button type="button" class="complete" data-id="${t.id}" aria-pressed="${completed.has(t.id)}">${completed.has(t.id)?'✓ Đã hoàn thành':'✓ Đánh dấu xong'}</button></div><details><summary>Kiến thức &amp; bài tập</summary><div class="detail"><strong>Nội dung chính</strong><ul>${t.detail.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><strong>Ví dụ bài tập</strong><ul>${t.problems.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><div class="goal"><strong>Mục tiêu:</strong> ${escapeHTML(t.goal)}</div></div></details></article><div class="track"><span class="pin"></span></div></div>`).join('')}</section>`).join('');
+  root.querySelectorAll('.complete').forEach(btn=>btn.addEventListener('click',()=>{
+    const id=btn.dataset.id;
+    if(completed.has(id))completed.delete(id);else completed.add(id);
+    try{localStorage.setItem(KEY,JSON.stringify([...completed]));}catch(e){}
+    const article=btn.closest('.node');article.classList.toggle('done',completed.has(id));
+    btn.textContent=completed.has(id)?'✓ Đã hoàn thành':'✓ Đánh dấu xong';
+    btn.setAttribute('aria-pressed', String(completed.has(id)));
+    updateProgress();
+  }));
+  updateProgress();
+}
+function updateProgress(){let n=TOPICS.filter(t=>completed.has(t.id)).length;document.getElementById('progress-text').textContent=`${n}/${TOPICS.length} · ${Math.round(n/TOPICS.length*100)}%`;document.getElementById('progress-fill').style.width=`${n/TOPICS.length*100}%`;}
+document.getElementById('reset').addEventListener('click',()=>{if(confirm('Đặt lại toàn bộ tiến độ học?')){completed.clear();try{localStorage.removeItem(KEY)}catch(e){}render();}});
+render();
+</script></body></html>
