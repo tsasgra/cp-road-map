@@ -16,8 +16,8 @@ details{border-top:1px solid #edf1f6}summary{color:#476aaf;padding:10px 16px;fon
 @media(max-width:650px){.top{padding:42px 20px 34px}.intro{display:block}.legend{margin-top:8px}.wrap{padding:24px 13px 55px}.step{grid-template-columns:34px minmax(0,1fr)}.step .track{grid-column:1}.step .node,.step.left .node,.step.right .node{grid-column:2}.track:before{left:16px}.track:after,.step.left .track:after,.step.right .track:after{left:16px;right:0;width:auto}.pin{left:17px}.stage-title{margin-left:0}.node h3{font-size:17px}}
 @media print{.top{background:#101e34!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{display:block}.side{display:none}.node{break-inside:avoid}.step{min-height:auto}.stage{break-inside:auto}details .detail{display:block}.finish{break-inside:avoid}}
 </style></head><body>
-<header class="top"><div class="hero"><span class="eyebrow">CP Learning Path · C++</span><h1>Roadmap Competitive Programming</h1><p>Từ cú pháp C++ đến Stack, Queue, Deque và Segment Tree. Lộ trình 15 chủ đề, 4 giai đoạn, có bài tập và mục tiêu rõ ràng.</p><div class="metrics"><div class="metric"><b>16</b> tuần</div><div class="metric"><b>32</b> buổi</div><div class="metric"><b>15</b> chủ đề</div><div class="metric"><b>4</b> giai đoạn</div></div></div></header>
-<div class="wrap"><aside class="side"><h3>Điều hướng</h3><div class="links"><a href="#stage-1">🔵 1. Nền tảng (Tuần 1–4)</a><a href="#stage-2">🟢 2. Xử lý dữ liệu (Tuần 5–8)</a><a href="#stage-3">🟠 3. Cấu trúc dữ liệu (Tuần 9–11)</a><a href="#stage-4">🟣 4. Tối ưu nâng cao (Tuần 12–15)</a><a href="#finish">🏆 Kiểm tra cuối khóa</a></div><div class="progress-label"><span>Tiến độ học</span><span id="progress-text">0/15 · 0%</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="tip">Bấm <b>“Kiến thức & bài tập”</b> để xem chi tiết từng chủ đề. Chọn <b>“Đánh dấu xong”</b> để theo dõi tiến độ ngay trên trình duyệt của bạn.</p><button type="button" class="reset" id="reset">Đặt lại tiến độ</button></aside>
+<header class="top"><div class="hero"><span class="eyebrow">CP Learning Path · C++</span><h1>Roadmap Competitive Programming</h1><p>Từ cú pháp C++ đến tìm kiếm, tối ưu thuật toán và cấu trúc dữ liệu. Lộ trình 15 chủ đề, 4 giai đoạn, có bài tập và mục tiêu rõ ràng.</p><div class="metrics"><div class="metric"><b>16</b> tuần</div><div class="metric"><b>32</b> buổi</div><div class="metric"><b>15</b> chủ đề</div><div class="metric"><b>4</b> giai đoạn</div></div></div></header>
+<div class="wrap"><aside class="side"><h3>Điều hướng</h3><div class="links"><a href="#stage-1">🔵 1. Nền tảng (Tuần 1–4)</a><a href="#stage-2">🟢 2. Xử lý dữ liệu (Tuần 5–8)</a><a href="#stage-3">🟠 3. Tối ưu thuật toán (Tuần 9–11)</a><a href="#stage-4">🟣 4. Cấu trúc dữ liệu (Tuần 12–15)</a><a href="#finish">🏆 Kiểm tra cuối khóa</a></div><div class="progress-label"><span>Tiến độ học</span><span id="progress-text">0/15 · 0%</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="tip">Bấm <b>“Kiến thức & bài tập”</b> để xem chi tiết từng chủ đề. Chọn <b>“Đánh dấu xong”</b> để theo dõi tiến độ ngay trên trình duyệt của bạn.</p><button type="button" class="reset" id="reset">Đặt lại tiến độ</button></aside>
 <main class="content"><div class="intro"><div><h2>Sơ đồ lộ trình</h2><p>Học từ trên xuống; các nhánh nối nhau theo thứ tự ưu tiên giảng dạy.</p></div><span class="legend">○ Chưa học &nbsp; ● Hoàn thành</span></div><div id="roadmap"></div><div class="finish" id="finish"><h2>🏆 Contest tổng hợp cuối khóa</h2><p>4–6 bài kết hợp duyệt, sắp xếp, prefix sum, stack/queue/deque, nhị phân, hai con trỏ và segment tree. Kiểm tra vào tuần 16.</p></div></main></div><div class="footer">Roadmap biên soạn riêng để giảng dạy CP từ cơ bản đến trung cấp · Có thể mở offline · Tiến độ lưu cục bộ trong trình duyệt</div>
 <script>
 const TOPICS = [
@@ -182,69 +182,9 @@ const TOPICS = [
     "goal": "Trả lời được nhiều truy vấn tổng đoạn trong O(1) mỗi truy vấn."
   },
   {
-    "id": "stack",
-    "stage": 3,
-    "week": "Tuần 9",
-    "name": "Stack (Ngăn xếp)",
-    "tag": "LIFO · Vào sau ra trước",
-    "level": "Cơ bản → Vận dụng",
-    "detail": [
-      "Nguyên lý LIFO và các thao tác push, pop, top, empty",
-      "Sử dụng std::stack trong C++; O(1) cho thao tác chính",
-      "Mô phỏng ngăn xếp; duyệt và xử lý dấu ngoặc",
-      "Giới thiệu monotonic stack (stack đơn điệu)"
-    ],
-    "problems": [
-      "Kiểm tra chuỗi ngoặc đúng",
-      "Xóa các phần tử kề nhau giống nhau",
-      "Next Greater Element / phần tử lớn hơn gần nhất"
-    ],
-    "goal": "Biết nhận diện bài toán cần xử lý phần tử gần nhất theo thứ tự vào-ra."
-  },
-  {
-    "id": "queue",
-    "stage": 3,
-    "week": "Tuần 9",
-    "name": "Queue (Hàng đợi)",
-    "tag": "FIFO · Vào trước ra trước",
-    "level": "Cơ bản → Vận dụng",
-    "detail": [
-      "Nguyên lý FIFO và các thao tác push, pop, front, back, empty",
-      "Sử dụng std::queue; O(1) cho các thao tác chính",
-      "Mô phỏng hàng đợi, xử lý tiến trình theo lượt",
-      "Giới thiệu ứng dụng trong BFS (BFS đồ thị học ở khóa sau)"
-    ],
-    "problems": [
-      "Mô phỏng hàng người xếp hàng",
-      "Xử lý yêu cầu theo thứ tự đến",
-      "Bài toán Hot Potato / truyền lượt"
-    ],
-    "goal": "Phân biệt queue với stack và chọn đúng quy tắc xử lý dữ liệu."
-  },
-  {
-    "id": "deque",
-    "stage": 3,
-    "week": "Tuần 10",
-    "name": "Deque (Hàng đợi hai đầu)",
-    "tag": "Thêm/xóa ở cả hai đầu",
-    "level": "Vận dụng",
-    "detail": [
-      "std::deque: push_front, push_back, pop_front, pop_back",
-      "Phân biệt deque với stack và queue; O(1) ở hai đầu",
-      "Duy trì deque đơn điệu (monotonic deque)",
-      "Sliding window minimum/maximum với độ phức tạp O(n)"
-    ],
-    "problems": [
-      "Mô phỏng thao tác tại hai đầu dãy",
-      "Tìm max của mỗi cửa sổ dài k",
-      "Tìm min của mỗi cửa sổ dài k"
-    ],
-    "goal": "Biết dùng deque hai đầu và tối ưu bài toán cực trị trên cửa sổ trượt."
-  },
-  {
     "id": "mapset",
     "stage": 3,
-    "week": "Tuần 11",
+    "week": "Tuần 9",
     "name": "Map / Set",
     "tag": "Cấu trúc dữ liệu có thứ tự và hash",
     "level": "Vận dụng",
@@ -263,8 +203,8 @@ const TOPICS = [
   },
   {
     "id": "binary",
-    "stage": 4,
-    "week": "Tuần 12",
+    "stage": 3,
+    "week": "Tuần 10",
     "name": "Chặt nhị phân",
     "tag": "Trên mảng và trên đáp án",
     "level": "Vận dụng",
@@ -284,8 +224,8 @@ const TOPICS = [
   },
   {
     "id": "two",
-    "stage": 4,
-    "week": "Tuần 13",
+    "stage": 3,
+    "week": "Tuần 11",
     "name": "Hai con trỏ",
     "tag": "Two pointers và sliding window",
     "level": "Vận dụng",
@@ -301,6 +241,66 @@ const TOPICS = [
       "Đoạn có tối đa k giá trị phân biệt"
     ],
     "goal": "Nhận diện điều kiện cho phép cửa sổ co giãn và chứng minh O(n)."
+  },
+  {
+    "id": "stack",
+    "stage": 4,
+    "week": "Tuần 12",
+    "name": "Stack (Ngăn xếp)",
+    "tag": "LIFO · Vào sau ra trước",
+    "level": "Cơ bản → Vận dụng",
+    "detail": [
+      "Nguyên lý LIFO và các thao tác push, pop, top, empty",
+      "Sử dụng std::stack trong C++; O(1) cho thao tác chính",
+      "Mô phỏng ngăn xếp; duyệt và xử lý dấu ngoặc",
+      "Giới thiệu monotonic stack (stack đơn điệu)"
+    ],
+    "problems": [
+      "Kiểm tra chuỗi ngoặc đúng",
+      "Xóa các phần tử kề nhau giống nhau",
+      "Next Greater Element / phần tử lớn hơn gần nhất"
+    ],
+    "goal": "Biết nhận diện bài toán cần xử lý phần tử gần nhất theo thứ tự vào-ra."
+  },
+  {
+    "id": "queue",
+    "stage": 4,
+    "week": "Tuần 12",
+    "name": "Queue (Hàng đợi)",
+    "tag": "FIFO · Vào trước ra trước",
+    "level": "Cơ bản → Vận dụng",
+    "detail": [
+      "Nguyên lý FIFO và các thao tác push, pop, front, back, empty",
+      "Sử dụng std::queue; O(1) cho các thao tác chính",
+      "Mô phỏng hàng đợi, xử lý tiến trình theo lượt",
+      "Giới thiệu ứng dụng trong BFS (BFS đồ thị học ở khóa sau)"
+    ],
+    "problems": [
+      "Mô phỏng hàng người xếp hàng",
+      "Xử lý yêu cầu theo thứ tự đến",
+      "Bài toán Hot Potato / truyền lượt"
+    ],
+    "goal": "Phân biệt queue với stack và chọn đúng quy tắc xử lý dữ liệu."
+  },
+  {
+    "id": "deque",
+    "stage": 4,
+    "week": "Tuần 13",
+    "name": "Deque (Hàng đợi hai đầu)",
+    "tag": "Thêm/xóa ở cả hai đầu",
+    "level": "Vận dụng",
+    "detail": [
+      "std::deque: push_front, push_back, pop_front, pop_back",
+      "Phân biệt deque với stack và queue; O(1) ở hai đầu",
+      "Duy trì deque đơn điệu (monotonic deque)",
+      "Sliding window minimum/maximum với độ phức tạp O(n)"
+    ],
+    "problems": [
+      "Mô phỏng thao tác tại hai đầu dãy",
+      "Tìm max của mỗi cửa sổ dài k",
+      "Tìm min của mỗi cửa sổ dài k"
+    ],
+    "goal": "Biết dùng deque hai đầu và tối ưu bài toán cực trị trên cửa sổ trượt."
   },
   {
     "id": "segtree",
@@ -324,7 +324,7 @@ const TOPICS = [
     "goal": "Tự cài đặt segment tree cho point update và range sum/min/max; hiểu độ phức tạp."
   }
 ];
-const GROUPS={1:{name:'NỀN TẢNG LẬP TRÌNH',sub:'Tuần 1–4 · Điều kiện, vòng lặp, số học và nguyên tố'},2:{name:'XỬ LÝ DỮ LIỆU',sub:'Tuần 5–8 · Duyệt, sắp xếp, đánh dấu và prefix sum'},3:{name:'CẤU TRÚC DỮ LIỆU',sub:'Tuần 9–11 · Stack, Queue, Deque, Map/Set'},4:{name:'TỐI ƯU VÀ CÂY ĐOẠN',sub:'Tuần 12–15 · Chặt nhị phân, hai con trỏ, segment tree'}};
+const GROUPS={1:{name:'NỀN TẢNG LẬP TRÌNH',sub:'Tuần 1–4 · Điều kiện, vòng lặp, số học và nguyên tố'},2:{name:'XỬ LÝ DỮ LIỆU',sub:'Tuần 5–8 · Duyệt, sắp xếp, đánh dấu và prefix sum'},3:{name:'KỸ THUẬT TỐI ƯU',sub:'Tuần 9–11 · Map/Set, chặt nhị phân, hai con trỏ'},4:{name:'CẤU TRÚC DỮ LIỆU',sub:'Tuần 12–15 · Stack, Queue, Deque, Segment Tree'}};
 const KEY='cp-learning-roadmap-v1';
 let completed = new Set();
 try{completed=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));}catch(e){}
