@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Roadmap CP C++ • 12 tuần</title>
+<title>Roadmap CP C++ • 16 tuần</title>
 <style>
 :root{--bg:#f5f7fc;--ink:#162236;--muted:#66758e;--blue:#4f83ed;--green:#269c75;--orange:#e3a044;--stroke:#e0e7f1;--card:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.5}
 .top{background:#101e34;color:#fff;position:relative;overflow:hidden;padding:62px 24px 46px}.top:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(90deg,#0007,#000)}.top:after{content:"";position:absolute;width:400px;height:400px;right:-140px;top:-170px;background:#527ae933;filter:blur(60px);border-radius:50%}.hero{position:relative;max-width:1160px;margin:auto}.eyebrow{display:inline-flex;align-items:center;background:#ffffff12;color:#b5d0ff;border:1px solid #ffffff24;border-radius:24px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.top h1{font-size:clamp(32px,5.4vw,58px);line-height:1.12;letter-spacing:-.04em;max-width:780px;margin:19px 0 14px}.top p{max-width:670px;color:#b6c3d9;font-size:16px;margin:0 0 24px}.metrics{display:flex;gap:12px;flex-wrap:wrap}.metric{padding:11px 16px;border:1px solid #ffffff2b;background:#ffffff0d;border-radius:12px;color:#dce6f8;font-size:14px}.metric b{color:#fff;font-size:16px}
 .wrap{display:grid;grid-template-columns:235px minmax(0,1fr);gap:35px;max-width:1200px;margin:0 auto;padding:34px 22px 85px}.side{position:sticky;top:20px;align-self:start;background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:20px;box-shadow:0 12px 38px #152c5710}.side h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#718099;margin:0 0 17px}.side a{display:block;color:#42536f;text-decoration:none;padding:9px 10px;margin:4px 0;border-radius:9px;font-size:13px;font-weight:600}.side a:hover{background:#f1f5fd;color:#255ecb}.progress-label{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:12px;margin:25px 0 8px}.progress-track{height:9px;background:#ebeff5;border-radius:30px;overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#5988ed,#2fb38b);border-radius:30px;transition:width .3s}.tip{font-size:12px;color:#7d8aa0;line-height:1.65;margin-top:14px}.reset{font:inherit;background:none;border:0;color:#a0aabc;text-decoration:underline;cursor:pointer;font-size:12px;padding:0;margin-top:14px}
 .content{min-width:0}.intro{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:4px 0 30px}.intro h2{font-size:23px;letter-spacing:-.025em;margin:0}.intro p{color:var(--muted);font-size:14px;margin:6px 0 0}.legend{color:#718099;font-size:12px;white-space:nowrap}
-.stage{margin:0 0 30px;--accent:var(--blue)}.stage[data-id="2"]{--accent:var(--green)}.stage[data-id="3"]{--accent:var(--orange)}.stage-title{max-width:570px;margin:0 auto 16px;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--stroke);padding:13px 18px;border-radius:13px;box-shadow:0 4px 15px #182b4409;position:relative;z-index:2}.stage-count{height:37px;min-width:37px;border-radius:10px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;display:grid;place-items:center}.stage-title b{display:block;font-size:14px}.stage-title small{color:#8390a4;display:block;font-size:12px;margin-top:2px}
+.stage{margin:0 0 30px;--accent:var(--blue)}.stage[data-id="2"]{--accent:var(--green)}.stage[data-id="3"]{--accent:var(--orange)}.stage[data-id="4"]{--accent:#9775d0}.stage-title{max-width:570px;margin:0 auto 16px;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--stroke);padding:13px 18px;border-radius:13px;box-shadow:0 4px 15px #182b4409;position:relative;z-index:2}.stage-count{height:37px;min-width:37px;border-radius:10px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;display:grid;place-items:center}.stage-title b{display:block;font-size:14px}.stage-title small{color:#8390a4;display:block;font-size:12px;margin-top:2px}
 .step{display:grid;grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr);min-height:150px;position:relative}.step .track{grid-column:2;grid-row:1;position:relative}.track:before{content:"";position:absolute;width:3px;top:0;bottom:0;left:calc(50% - 1.5px);background:#d6deec}.track:after{content:"";position:absolute;height:2px;background:#cfdae9;top:42px}.step.left .track:after{left:0;width:50%}.step.right .track:after{right:0;width:50%}.pin{position:absolute;left:50%;top:31px;transform:translateX(-50%);height:23px;width:23px;background:var(--accent);border:5px solid #fff;border-radius:50%;box-shadow:0 0 0 2px var(--accent),0 3px 8px #102e3e22;z-index:1}
 .node{grid-row:1;background:#fff;border:1px solid #e0e7ef;border-top:3px solid var(--accent);border-radius:14px;box-shadow:0 5px 23px #11243a0b;margin-bottom:16px;overflow:hidden;min-width:0}.step.left .node{grid-column:1}.step.right .node{grid-column:3}.node-head{padding:17px 17px 11px;display:flex;align-items:start;gap:10px;justify-content:space-between}.seq{font-weight:800;font-size:11px;letter-spacing:.09em;color:var(--accent)}.node h3{margin:3px 0 3px;font-size:18px;letter-spacing:-.025em;line-height:1.25}.node p{margin:0;font-size:12px;color:#7b8aa1}.week{font-weight:700;background:#f1f5fa;border-radius:8px;padding:6px 8px;white-space:nowrap;color:#677a96;font-size:11px}.node-actions{display:flex;align-items:center;justify-content:space-between;padding:0 16px 14px}.level{font-size:11px;color:#7d8ba2}.complete{border:1px solid #d8e3ed;background:#fff;color:#4d627f;font-size:11px;padding:7px 10px;border-radius:8px;cursor:pointer;font-weight:700}.complete:hover{border-color:#42ae8e;color:#18795a}.node.done{background:#fafffd;border-color:#bce8d3;border-top-color:#33b588}.node.done .complete{background:#e2f7ed;color:#16815d;border-color:#bce8d3}
 details{border-top:1px solid #edf1f6}summary{color:#476aaf;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer;user-select:none}details[open] summary{background:#f7f9fd}details .detail{padding:12px 16px 16px;font-size:12px;color:#5d6d87}details .detail strong{font-size:12px;color:#24344b}details ul{padding-left:18px;margin:6px 0 13px}details li{margin:4px 0}.goal{background:#f1f6fe;color:#3a5a89;border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.5}
@@ -16,9 +16,9 @@ details{border-top:1px solid #edf1f6}summary{color:#476aaf;padding:10px 16px;fon
 @media(max-width:650px){.top{padding:42px 20px 34px}.intro{display:block}.legend{margin-top:8px}.wrap{padding:24px 13px 55px}.step{grid-template-columns:34px minmax(0,1fr)}.step .track{grid-column:1}.step .node,.step.left .node,.step.right .node{grid-column:2}.track:before{left:16px}.track:after,.step.left .track:after,.step.right .track:after{left:16px;right:0;width:auto}.pin{left:17px}.stage-title{margin-left:0}.node h3{font-size:17px}}
 @media print{.top{background:#101e34!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{display:block}.side{display:none}.node{break-inside:avoid}.step{min-height:auto}.stage{break-inside:auto}details .detail{display:block}.finish{break-inside:avoid}}
 </style></head><body>
-<header class="top"><div class="hero"><span class="eyebrow">CP Learning Path · C++</span><h1>Roadmap Competitive Programming</h1><p>Từ câu lệnh điều kiện đến tư duy tối ưu thuật toán. Lộ trình giảng dạy 11 chủ đề, chia 3 giai đoạn với bài tập và mục tiêu rõ ràng.</p><div class="metrics"><div class="metric"><b>12</b> tuần</div><div class="metric"><b>24</b> buổi</div><div class="metric"><b>11</b> chủ đề</div><div class="metric"><b>3</b> giai đoạn</div></div></div></header>
-<div class="wrap"><aside class="side"><h3>Điều hướng</h3><div class="links"><a href="#stage-1">🔵 1. Nền tảng (Tuần 1–4)</a><a href="#stage-2">🟢 2. Xử lý dữ liệu (Tuần 5–8)</a><a href="#stage-3">🟠 3. Tối ưu (Tuần 9–12)</a><a href="#finish">🏆 Kiểm tra cuối khóa</a></div><div class="progress-label"><span>Tiến độ học</span><span id="progress-text">0/11 · 0%</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="tip">Bấm <b>“Kiến thức & bài tập”</b> để xem chi tiết từng chủ đề. Chọn <b>“Đánh dấu xong”</b> để theo dõi tiến độ ngay trên trình duyệt của bạn.</p><button type="button" class="reset" id="reset">Đặt lại tiến độ</button></aside>
-<main class="content"><div class="intro"><div><h2>Sơ đồ lộ trình</h2><p>Học từ trên xuống; các nhánh nối nhau theo thứ tự ưu tiên giảng dạy.</p></div><span class="legend">○ Chưa học &nbsp; ● Hoàn thành</span></div><div id="roadmap"></div><div class="finish" id="finish"><h2>🏆 Contest tổng hợp cuối khóa</h2><p>4–5 bài phối hợp duyệt, sắp xếp, đánh dấu, prefix sum, chặt nhị phân và hai con trỏ. Đánh giá tư duy, độ phức tạp và kỹ năng debug.</p></div></main></div><div class="footer">Roadmap biên soạn riêng để giảng dạy CP cơ bản · Có thể mở offline · Tiến độ lưu cục bộ trong trình duyệt</div>
+<header class="top"><div class="hero"><span class="eyebrow">CP Learning Path · C++</span><h1>Roadmap Competitive Programming</h1><p>Từ cú pháp C++ đến Stack, Queue, Deque và Segment Tree. Lộ trình 15 chủ đề, 4 giai đoạn, có bài tập và mục tiêu rõ ràng.</p><div class="metrics"><div class="metric"><b>16</b> tuần</div><div class="metric"><b>32</b> buổi</div><div class="metric"><b>15</b> chủ đề</div><div class="metric"><b>4</b> giai đoạn</div></div></div></header>
+<div class="wrap"><aside class="side"><h3>Điều hướng</h3><div class="links"><a href="#stage-1">🔵 1. Nền tảng (Tuần 1–4)</a><a href="#stage-2">🟢 2. Xử lý dữ liệu (Tuần 5–8)</a><a href="#stage-3">🟠 3. Cấu trúc dữ liệu (Tuần 9–11)</a><a href="#stage-4">🟣 4. Tối ưu nâng cao (Tuần 12–15)</a><a href="#finish">🏆 Kiểm tra cuối khóa</a></div><div class="progress-label"><span>Tiến độ học</span><span id="progress-text">0/15 · 0%</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="tip">Bấm <b>“Kiến thức & bài tập”</b> để xem chi tiết từng chủ đề. Chọn <b>“Đánh dấu xong”</b> để theo dõi tiến độ ngay trên trình duyệt của bạn.</p><button type="button" class="reset" id="reset">Đặt lại tiến độ</button></aside>
+<main class="content"><div class="intro"><div><h2>Sơ đồ lộ trình</h2><p>Học từ trên xuống; các nhánh nối nhau theo thứ tự ưu tiên giảng dạy.</p></div><span class="legend">○ Chưa học &nbsp; ● Hoàn thành</span></div><div id="roadmap"></div><div class="finish" id="finish"><h2>🏆 Contest tổng hợp cuối khóa</h2><p>4–6 bài kết hợp duyệt, sắp xếp, prefix sum, stack/queue/deque, nhị phân, hai con trỏ và segment tree. Kiểm tra vào tuần 16.</p></div></main></div><div class="footer">Roadmap biên soạn riêng để giảng dạy CP từ cơ bản đến trung cấp · Có thể mở offline · Tiến độ lưu cục bộ trong trình duyệt</div>
 <script>
 const TOPICS = [
   {
@@ -182,25 +182,64 @@ const TOPICS = [
     "goal": "Trả lời được nhiều truy vấn tổng đoạn trong O(1) mỗi truy vấn."
   },
   {
-    "id": "binary",
+    "id": "stack",
     "stage": 3,
-    "week": "Tuần 9–10",
-    "name": "Chặt nhị phân",
-    "tag": "Trên mảng và trên đáp án",
-    "level": "Vận dụng",
+    "week": "Tuần 9",
+    "name": "Stack (Ngăn xếp)",
+    "tag": "LIFO · Vào sau ra trước",
+    "level": "Cơ bản → Vận dụng",
     "detail": [
-      "Tìm kiếm nhị phân trên mảng đã sắp xếp",
-      "lower_bound và upper_bound",
-      "Tìm vị trí đầu tiên/cuối cùng thỏa điều kiện",
-      "Binary search on answer: hàm check đơn điệu",
-      "Lỗi biên, mid, vòng lặp vô hạn, overflow"
+      "Nguyên lý LIFO và các thao tác push, pop, top, empty",
+      "Sử dụng std::stack trong C++; O(1) cho thao tác chính",
+      "Mô phỏng ngăn xếp; duyệt và xử lý dấu ngoặc",
+      "Giới thiệu monotonic stack (stack đơn điệu)"
     ],
     "problems": [
-      "Đếm số lần xuất hiện của x trong mảng sort",
-      "Tìm giá trị nhỏ nhất thỏa điều kiện",
-      "Factory Machines (CSES)"
+      "Kiểm tra chuỗi ngoặc đúng",
+      "Xóa các phần tử kề nhau giống nhau",
+      "Next Greater Element / phần tử lớn hơn gần nhất"
     ],
-    "goal": "Chứng minh được tính đơn điệu trước khi áp dụng chặt nhị phân."
+    "goal": "Biết nhận diện bài toán cần xử lý phần tử gần nhất theo thứ tự vào-ra."
+  },
+  {
+    "id": "queue",
+    "stage": 3,
+    "week": "Tuần 9",
+    "name": "Queue (Hàng đợi)",
+    "tag": "FIFO · Vào trước ra trước",
+    "level": "Cơ bản → Vận dụng",
+    "detail": [
+      "Nguyên lý FIFO và các thao tác push, pop, front, back, empty",
+      "Sử dụng std::queue; O(1) cho các thao tác chính",
+      "Mô phỏng hàng đợi, xử lý tiến trình theo lượt",
+      "Giới thiệu ứng dụng trong BFS (BFS đồ thị học ở khóa sau)"
+    ],
+    "problems": [
+      "Mô phỏng hàng người xếp hàng",
+      "Xử lý yêu cầu theo thứ tự đến",
+      "Bài toán Hot Potato / truyền lượt"
+    ],
+    "goal": "Phân biệt queue với stack và chọn đúng quy tắc xử lý dữ liệu."
+  },
+  {
+    "id": "deque",
+    "stage": 3,
+    "week": "Tuần 10",
+    "name": "Deque (Hàng đợi hai đầu)",
+    "tag": "Thêm/xóa ở cả hai đầu",
+    "level": "Vận dụng",
+    "detail": [
+      "std::deque: push_front, push_back, pop_front, pop_back",
+      "Phân biệt deque với stack và queue; O(1) ở hai đầu",
+      "Duy trì deque đơn điệu (monotonic deque)",
+      "Sliding window minimum/maximum với độ phức tạp O(n)"
+    ],
+    "problems": [
+      "Mô phỏng thao tác tại hai đầu dãy",
+      "Tìm max của mỗi cửa sổ dài k",
+      "Tìm min của mỗi cửa sổ dài k"
+    ],
+    "goal": "Biết dùng deque hai đầu và tối ưu bài toán cực trị trên cửa sổ trượt."
   },
   {
     "id": "mapset",
@@ -223,9 +262,30 @@ const TOPICS = [
     "goal": "Chọn đúng cấu trúc dữ liệu theo kích thước và kiểu giá trị."
   },
   {
-    "id": "two",
-    "stage": 3,
+    "id": "binary",
+    "stage": 4,
     "week": "Tuần 12",
+    "name": "Chặt nhị phân",
+    "tag": "Trên mảng và trên đáp án",
+    "level": "Vận dụng",
+    "detail": [
+      "Tìm kiếm nhị phân trên mảng đã sắp xếp",
+      "lower_bound và upper_bound",
+      "Tìm vị trí đầu tiên/cuối cùng thỏa điều kiện",
+      "Binary search on answer: hàm check đơn điệu",
+      "Lỗi biên, mid, vòng lặp vô hạn, overflow"
+    ],
+    "problems": [
+      "Đếm số lần xuất hiện của x trong mảng sort",
+      "Tìm giá trị nhỏ nhất thỏa điều kiện",
+      "Factory Machines (CSES)"
+    ],
+    "goal": "Chứng minh được tính đơn điệu trước khi áp dụng chặt nhị phân."
+  },
+  {
+    "id": "two",
+    "stage": 4,
+    "week": "Tuần 13",
     "name": "Hai con trỏ",
     "tag": "Two pointers và sliding window",
     "level": "Vận dụng",
@@ -241,16 +301,37 @@ const TOPICS = [
       "Đoạn có tối đa k giá trị phân biệt"
     ],
     "goal": "Nhận diện điều kiện cho phép cửa sổ co giãn và chứng minh O(n)."
+  },
+  {
+    "id": "segtree",
+    "stage": 4,
+    "week": "Tuần 14–15",
+    "name": "Segment Tree (Cây đoạn)",
+    "tag": "Truy vấn đoạn và cập nhật điểm",
+    "level": "Trung cấp",
+    "detail": [
+      "Ôn đệ quy, chia đôi đoạn [l, r], cây nhị phân và chỉ số nút",
+      "Build cây O(n), truy vấn đoạn O(log n)",
+      "Cập nhật một vị trí O(log n); sum/min/max trên đoạn",
+      "So sánh với prefix sum: hỗ trợ cập nhật động",
+      "Lazy propagation chỉ là phần mở rộng, chưa bắt buộc trong khóa"
+    ],
+    "problems": [
+      "Truy vấn tổng đoạn và cập nhật một phần tử",
+      "Truy vấn giá trị nhỏ nhất trên đoạn",
+      "Tìm phần tử đầu tiên thỏa điều kiện bằng cây (nâng cao)"
+    ],
+    "goal": "Tự cài đặt segment tree cho point update và range sum/min/max; hiểu độ phức tạp."
   }
 ];
-const GROUPS={1:{name:'NỀN TẢNG LẬP TRÌNH',sub:'Tuần 1–4 · Điều kiện, vòng lặp, số học và nguyên tố'},2:{name:'XỬ LÝ DỮ LIỆU',sub:'Tuần 5–8 · Duyệt, sắp xếp, đánh dấu và prefix sum'},3:{name:'TỐI ƯU THUẬT TOÁN',sub:'Tuần 9–12 · Binary search, map/set, two pointers'}};
+const GROUPS={1:{name:'NỀN TẢNG LẬP TRÌNH',sub:'Tuần 1–4 · Điều kiện, vòng lặp, số học và nguyên tố'},2:{name:'XỬ LÝ DỮ LIỆU',sub:'Tuần 5–8 · Duyệt, sắp xếp, đánh dấu và prefix sum'},3:{name:'CẤU TRÚC DỮ LIỆU',sub:'Tuần 9–11 · Stack, Queue, Deque, Map/Set'},4:{name:'TỐI ƯU VÀ CÂY ĐOẠN',sub:'Tuần 12–15 · Chặt nhị phân, hai con trỏ, segment tree'}};
 const KEY='cp-learning-roadmap-v1';
 let completed = new Set();
 try{completed=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));}catch(e){}
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function render(){
   const root=document.getElementById('roadmap');
-  root.innerHTML=[1,2,3].map(group=>`<section class="stage" data-id="${group}" id="stage-${group}"><div class="stage-title"><div class="stage-count">0${group}</div><div><b>${GROUPS[group].name}</b><small>${GROUPS[group].sub}</small></div></div>${TOPICS.filter(t=>t.stage===group).map((t,i)=>`<div class="step ${i%2?'right':'left'}"><article class="node ${completed.has(t.id)?'done':''}"><div class="node-head"><div><span class="seq">CHỦ ĐỀ ${String(TOPICS.indexOf(t)+1).padStart(2,'0')}</span><h3>${escapeHTML(t.name)}</h3><p>${escapeHTML(t.tag)}</p></div><span class="week">${escapeHTML(t.week)}</span></div><div class="node-actions"><span class="level">◈ ${escapeHTML(t.level)}</span><button type="button" class="complete" data-id="${t.id}" aria-pressed="${completed.has(t.id)}">${completed.has(t.id)?'✓ Đã hoàn thành':'✓ Đánh dấu xong'}</button></div><details><summary>Kiến thức &amp; bài tập</summary><div class="detail"><strong>Nội dung chính</strong><ul>${t.detail.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><strong>Ví dụ bài tập</strong><ul>${t.problems.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><div class="goal"><strong>Mục tiêu:</strong> ${escapeHTML(t.goal)}</div></div></details></article><div class="track"><span class="pin"></span></div></div>`).join('')}</section>`).join('');
+  root.innerHTML=[1,2,3,4].map(group=>`<section class="stage" data-id="${group}" id="stage-${group}"><div class="stage-title"><div class="stage-count">0${group}</div><div><b>${GROUPS[group].name}</b><small>${GROUPS[group].sub}</small></div></div>${TOPICS.filter(t=>t.stage===group).map((t,i)=>`<div class="step ${i%2?'right':'left'}"><article class="node ${completed.has(t.id)?'done':''}"><div class="node-head"><div><span class="seq">CHỦ ĐỀ ${String(TOPICS.indexOf(t)+1).padStart(2,'0')}</span><h3>${escapeHTML(t.name)}</h3><p>${escapeHTML(t.tag)}</p></div><span class="week">${escapeHTML(t.week)}</span></div><div class="node-actions"><span class="level">◈ ${escapeHTML(t.level)}</span><button type="button" class="complete" data-id="${t.id}" aria-pressed="${completed.has(t.id)}">${completed.has(t.id)?'✓ Đã hoàn thành':'✓ Đánh dấu xong'}</button></div><details><summary>Kiến thức &amp; bài tập</summary><div class="detail"><strong>Nội dung chính</strong><ul>${t.detail.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><strong>Ví dụ bài tập</strong><ul>${t.problems.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><div class="goal"><strong>Mục tiêu:</strong> ${escapeHTML(t.goal)}</div></div></details></article><div class="track"><span class="pin"></span></div></div>`).join('')}</section>`).join('');
   root.querySelectorAll('.complete').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.id;
     if(completed.has(id))completed.delete(id);else completed.add(id);
